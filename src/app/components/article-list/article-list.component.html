@@ -8,6 +8,7 @@
         <p>{{ article.createDate | date : 'dd.MM.yyyy' }}</p>
         <h2>{{ article.title }}</h2>
         <p>{{ article.content }}</p>
+        <a [routerLink]="['/article', article.id]">Voir l'article</a>
     </article>
     } }@empty {
     <div class="no-articles">

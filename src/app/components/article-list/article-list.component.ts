@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Article } from '../../models/article.model';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 @Component({
     selector: 'app-article-list',
     standalone: true,
-    imports: [DatePipe, CommonModule],
+    imports: [DatePipe, CommonModule, RouterLink],
     templateUrl: './article-list.component.html',
     styleUrl: './article-list.component.scss',
 })
