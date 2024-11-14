@@ -1,6 +1,17 @@
-<article class="miniature">
-    <img [src]="article.image" [alt]="article.title" />
-    <p>{{ article.createDate | date : 'dd.MM.yyyy' }}</p>
-    <h2>{{ article.title }}</h2>
-    <p>{{ article.content }}</p>
-</article>
+<section id="article_list">
+    @for (article of articles; track $index) { @if (article.isPublished) {
+    <article
+        [ngClass]="{ 'popular-article': article.likeCount > 100 }"
+        class="miniature"
+    >
+        <img [src]="article.image" [alt]="article.title" />
+        <p>{{ article.createDate | date : 'dd.MM.yyyy' }}</p>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+    </article>
+    } }@empty {
+    <div class="no-articles">
+        <h2>No articles found</h2>
+    </div>
+    }
+</section>

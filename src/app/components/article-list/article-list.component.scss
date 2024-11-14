@@ -1,0 +1,20 @@
+#article_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.miniature {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.popular-article {
+    border: 1px red solid;
+    background-color: salmon;
+}
